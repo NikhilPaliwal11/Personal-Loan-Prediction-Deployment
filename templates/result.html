@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Personal Loan Prediction</title>
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>		
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		<h1 style="color:NAVY;font-size:30px;font-family:Garamond;">Personal Loan Prediction</h1>
+              
+	</head>
+    <body style="background-color:##ffffff;">
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction:<span class="apply"> Customer will apply for Personal Loan.</span></h1>
+				<img class="predict_yes" src="{{url_for('static',filename = 'Yes.gif') }}" alt="Yes">
+			{% elif prediction==0 %}
+				<h1 >Prediction:<span class="not_apply"> Customer will not apply for Personal Loan.</h1>
+				<img class="predict_no" src="{{url_for('static',filename = 'No.gif') }}" alt="No">
+	        {% endif %}
+		</div>
+		
+	<p class="link-desc"> Below is the link to Git repository, linkedin , kaggle</p>
+    </body>
+    
+    
+	<!-- Footer -->
+    <div id='footer_result'>
+        <p class='footer-description'> By Nikhil Paliwal </p>
+			<div >
+             <a target="_blank" href="https://github.com/NikhilPaliwal11/Personal-Loan-Prediction-Deployment"><i class="iconify" data-icon="ant-design:github-filled" data-inline="false" ></i></a>
+             <a target="_blank" href="https://www.linkedin.com/in/nikhil-paliwal-23b43618b"><i class="iconify" data-icon="fa-brands:linkedin" data-inline="false" ></i></a>
+             <a target="_blank" href="https://www.kaggle.com/nikhilpaliwal/notebooks" ><i class="iconify" data-icon="cib:kaggle" data-inline="false" ></i></a>
+			</div>
+    </div>
+	
+</html>

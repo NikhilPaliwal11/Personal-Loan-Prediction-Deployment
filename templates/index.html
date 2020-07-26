@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Personal Loan Prediction</title>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    </head>
+       
+ 
+    <body style="background-color:SeaShell;">
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Personal Loan Prediction</span></h2>
+		</div>
+        <div id='description'>
+        		<p>The project is related to Bank loan modelling and to identify the customer who have a higher probality of purchasing Personal loan.</p>
+		</div>
+		
+        <!-- Input Area -->
+        <div class="input-heading"><h3>Enter Inputs Here</h3></div>
+		<div id="main" class="in_border">
+		
+    		<form autocomplete="on" action="{{ url_for('predict') }}" method="POST">
+				<h2 class="name-age">Customer Age:</h2>
+                <input class="form-age" type="text" name="Age" placeholder="Age eg. 38" maxlength="3" required="required"><br>
+				<h2 class="name-income">Customer Income:</h2>
+                <input class="form-income" type="text" name="Income" placeholder="Annual Income eg. 9620000" required="required"><br>
+                <h2 class="name-family">Customer Family size:</h2> 
+				<select class="form-opt-family" name="Family" required:"required">
+					<option disabled="disabled" selected="selected">--Choose Option--</option>
+					<option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    </select><br>
+                <h2 class="name-CCAvg">Customer avg spending on Credit Card monthly:</h2>
+				<input class="form-opt-CCAvg" type="text" name="CCAvg" placeholder=" CC Avg eg. 347800" required="required"><br>
+                <h2 class="name-education">Customer Education:</h2>
+				<select class="form-opt-education" name="Education" required="required">
+					<option disabled="disabled" selected="selected">--Choose Option--</option>
+					<option value="1">Undergrad</option>
+                    <option value="2">Graduate</option>
+                    <option value="3">Advanced/Professional</option>
+                    </select><br>
+                <h2 class="name-mortgage">Customer House Mortgage value if any:</h2>
+				<input class="form-opt-mortgage" type="text" name="Mortgage" placeholder="Mortage value eg. 9916000" required="required"><br>
+				<h2 class="name-security">Customer have Securities Account:</h2>
+				<select class="form-opt-security" name="SecuritiesAccount" required="required">
+					<option disabled="disabled" selected="selected">--Choose Option--</option>
+					<option value="0">No</option>
+                    <option value="1">Yes</option>
+                    </select><br>
+                <h2 class="name-cdacc">Customer have Certificate of Deposit account:</h2>
+				<select class="form-opt-cdacc" name="CDAccount" required="required">
+					<option disabled="disabled" selected="selected">--Choose Option--</option>
+					<option value="0">No</option>
+                    <option value="1">Yes</option>
+                    </select><br>
+        		<h2 class="name-online">Customer use Internet banking facilities:</h2>
+				<select class="form-opt-online" name="Online" required="required">
+					<option disabled="disabled" selected="selected">--Choose Option--</option>
+					<option value="0">No</option>
+                    <option value="1">Yes</option>
+                    </select><br>
+        		<h2 class="name-credit">Customer uses Credit Card:</h2>
+				<select class="form-opt-name-credit" name="CreditCard" required="required">
+					<option disabled="disabled" selected="selected">--Choose Option--</option>
+					<option value="0">No</option>
+                    <option value="1">Yes</option>
+                    </select>
+        		<input type="submit" class="button" value="Predict">
+        		<input type="reset"  class="reset_button" value="Reset">
+			</form>
+    	</div>
+                   
+    <img class="loan-img" src="{{ url_for('static', filename='personal_loan.jpg') }}" alt="Persoanl Loan Image"> 
+	<!-- Footer -->
+    <div id='footer'>
+        <p class='footer-description'> By Nikhil Paliwal </p>
+			<div >
+             <a target="_blank" href="https://github.com/NikhilPaliwal11/Personal-Loan-Prediction-Deployment"><i class="iconify" data-icon="ant-design:github-filled" data-inline="false" ></i></a>
+             <a target="_blank" href="https://www.linkedin.com/in/nikhil-paliwal-23b43618b"><i class="iconify" data-icon="fa-brands:linkedin" data-inline="false" ></i></a>
+             <a target="_blank" href="https://www.kaggle.com/nikhilpaliwal/notebooks" ><i class="iconify" data-icon="cib:kaggle" data-inline="false" ></i></a>
+			</div>
+    </div>        
+    </body>     
+       
+</html>
+
+
+
