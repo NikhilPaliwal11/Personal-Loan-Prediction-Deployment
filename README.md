@@ -3,3 +3,5 @@
 • If you want to view the deployed model, click on the following link:https://personal-loan-prediction-api.herokuapp.com
 
 • Please do ⭐ the repository, if it helped you in anyway.
+
+• Kaggle Notebook link:https://www.kaggle.com/nikhilpaliwal/notebooks
